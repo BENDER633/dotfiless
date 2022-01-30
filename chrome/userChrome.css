@@ -1,0 +1,66 @@
+/* Import from firefox css-tacks*/
+/*@import url(tacks/button_effect_scale_onclick.css);
+/*@import url(tacks/hide_toolbox_top_bottom_borders.css);
+/*@import url(tacks/minimal_text_fields.css);
+/*@import url(tacks/minimal_toolbarbuttons.css);
+
+
+/*Import minimalist colorful tacks */
+/*@import url(tacks/urlHighlight.css);*/
+@import url(tacks/sideberryMods.css);
+@import url(tacks/menuShow.css);
+/*#fullscr-toggler {display:none!important}
+/*@import url(tacks/darkContextMenu.css);
+
+/* Apply your custom modifications after imports */
+#TabsToolbar, #sidebar-header, #sidebar-splitter {
+  display: none;
+}
+
+/* Bookmark Panel Tweaks */
+ #sidebar-box,
+ #sidebar,
+ .sidebar-placesTree {
+/*      font-family: Fira Sans !important;   */
+     color: #14141D !important;
+     background-color: rgba(20,20,29) !important;
+ }
+
+#search-box {
+  color:rgb(20,20,29;
+}
+
+/* Remove Folders from Bookmark Sidebar*/
+.sidebar-placesTreechildren::-moz-tree-image(title, container){ 
+list-style-image: none !important;
+display: none !important;
+padding-right: 0px !important;
+margin: 0px 0px !important;
+width: 0px !important; 
+}
+
+/* Fira Sans In Most Places */
+/*#searchFilter,
+  menulist,
+  input,  
+  textbox,
+  richlistbox,
+  treecol,
+  button,
+  menu,
+#permList{
+    /*font-family: Fira Sans !important;
+}
+
+#PersonalToolbar,
+#personal-bookmarks,
+#PlacesToolbar,
+#toolbarbutton {
+  /*font-family: Fira Sans !important;
+}
+*/
+@-moz-document url("about:newtab") {  
+    body {
+        background-color: #14141D !important;
+    }
+}

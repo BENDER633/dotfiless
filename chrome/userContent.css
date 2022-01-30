@@ -1,0 +1,14 @@
+@-moz-document url("about:home"), url("about:newtab") {
+  body {
+    background-image: url("darkblueasc.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-attachment: fixed !important; 
+  }
+}
+
+.top-site-outer:is(.active, :focus, :hover) { 
+/*Remove dark-gray mouse hover box*/
+    box-shadow: none !important;     
+    background:transparent !important; 
