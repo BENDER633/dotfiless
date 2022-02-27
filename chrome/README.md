@@ -1,5 +1,7 @@
 screenshots
 with hidden sidebar
-![Screenshot (1060)](https://user-images.githubusercontent.com/73101494/151688232-9e72dd44-7ea7-4905-b5f1-9b7e39967422.png)
-with unhidden sidebar
-![Screenshot (1059)](https://user-images.githubusercontent.com/73101494/151688235-9be7f008-68bb-45c6-90d6-d80dae183fe6.png)
+![ 2022-02-27 at 6 331 17 PM](https://user-images.githubusercontent.com/73101494/155883516-71af662a-9946-4aa5-aaf7-16e79410576f.jpeg)
+
+
+unhidden sidebar
+![ 2022-02-27 at 6 331 17 PM](https://user-images.githubusercontent.com/73101494/155883524-1ce41422-1ff2-4db8-b87f-27f381faa24b.jpeg)
