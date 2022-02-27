@@ -27,6 +27,9 @@
   margin-left: 30px;
 }
 
+#main-window[sizemode="fullscreen"] #appcontent{ margin-left:1px }
+
+
 /* Page Actions Hide and Show on Hover */
 
 /* Hide Buttons and Reveal on Hover */
