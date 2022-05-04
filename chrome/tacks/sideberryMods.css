@@ -1,85 +1,48 @@
 
 #####W### FOR LINUX #############
 
-/*  Sideberry Dynamic sidebar   */
-#sidebar-box {
-  overflow: hidden;
-  height: calc(100% - 30px);
-  position: fixed;
-  max-width: 30px;
-  display: block;
-  transition: 10oms;
-  z-index: 3;
+#sidebar-box{
+  --uc-sidebar-width: 30px;
+  --uc-sidebar-hover-width: 250px;
+  --uc-autohide-sidebar-delay: 5 ms; /* Wait 0.6s before hiding sidebar */
+  position: relative;
+  min-width: var(--uc-sidebar-width) !important;
+  width: var(--uc-sidebar-width) !important;
+  max-width: var(--uc-sidebar-width) !important;
+  z-index:1;
 }
 
-#sidebar-box:hover {
-  max-width: 250px
-  ;
+#sidebar-box[positionend]{ direction: rtl }
+#sidebar-box[positionend] > *{ direction: ltr }
+
+#sidebar-box[positionend]:-moz-locale-dir(rtl){ direction: ltr }
+#sidebar-box[positionend]:-moz-locale-dir(rtl) > *{ direction: rtl }
+
+#main-window[sizemode="fullscreen"] #sidebar-box{ --uc-sidebar-width: 1px; }
+
+#sidebar-splitter{ display: none }
+
+#sidebar-header{ overflow: hidden; color: var(--chrome-color, inherit) !important}
+
+#sidebar{
+  transition: min-width 5 ms linear var(--uc-autohide-sidebar-delay) !important;
+  min-width: var(--uc-sidebar-width) !important;
+  will-change: min-width;
 }
 
-#sidebar {
-  width: calc(30px * 10) !important;
-  max-width: 50vw !important;
-  height: 100%;
+#sidebar-box:hover > #sidebar{ min-width: var(--uc-sidebar-hover-width) !important; transition-delay: 0ms !important }
+
+.sidebar-panel{
+  background-color: transparent !important;
+  color: var(--newtab-text-primary-color) !important;
 }
 
-#appcontent {
-  margin-left: 30px;
+.sidebar-panel #search-box{
+  -moz-appearance: none !important;
+  background-color: rgba(249,249,250,0.1) !important;
+  color: inherit !important;
 }
 
-#main-window[sizemode="fullscreen"] #appcontent{ margin-left:1px }
-
-
-/* Page Actions Hide and Show on Hover */
-
-/* Hide Buttons and Reveal on Hover */
-
-#page-action-buttons:not(:hover) .urlbar-page-action,
-#page-action-buttons:not(:hover) #star-button
-{
-  width: 0px !important;
-  min-width: 0px !important;
-  padding-left: 0px !important;
-  padding-right: 10px !important;
-  margin-right: -5px !important;
-  transition: all 250ms ease-in-out;
-}
-
-#page-action-buttons:not(:hover) #userContext-indicator {
-  margin-right : 37px !important;
-  transition: all 250ms ease-in-out;
-}
-
-#page-action-buttons:hover .urlbar-page-action,
-#page-action-buttons:hover #star-button  {
-  visibility: visible;
-  min-width: unset !important;
-}
-
-#page-action-buttons:hover #userContext-indicator {
-  margin-right : 0px !important;
-}
-
-/* Create page actions hover "button" */
-#page-action-buttons::after {
-  content: "•••";
-  position: absolute;
-  top: 0.7em;
-  font-size: 0.7em;
-  opacity: 0.5;
-  right: 8px;
-  transition: all 50ms ease-in-out;
-}
-
-/* Hide the button on hover */
-#page-action-buttons:hover::after {
-  display: none !important;
-  width: 0px !important;
-  margin-left: 0px !important;
-  transition: all 50ms ease-in-out;
-}
-
-/* Hide Buttons and Reveal on Hover Finished*/
 #urlbar,#searchbar {
   font-size: 13px !important;
 	margin-top: 0px !important;
