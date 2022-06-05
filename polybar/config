@@ -298,7 +298,7 @@ format-connected-prefix = ""
 format-connected-prefix-foreground =#3dbabe 
 format-underline = #4bffdc
 label-connected = "  %downspeed% "
-label-disconnected = disconnected
+label-disconnected = X
 
 
 
